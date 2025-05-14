@@ -188,38 +188,38 @@ export class ComFactoryService {
     // });
   }
 
-  async decodeAndMapQRCode(imageBuffer: Buffer) {
-    const image = await Jimp.read(imageBuffer);
+  // async decodeAndMapQRCode(imageBuffer: Buffer) {
+  //   const image = await Jimp.read(imageBuffer);
 
-    return new Promise(async (resolve, reject) => {
-      const qr = new QrCodeReader();
+  //   return new Promise(async (resolve, reject) => {
+  //     const qr = new QrCodeReader();
 
-      qr.callback = async (err, value) => {
-        if (err || !value) {
-          return reject('Could not decode QR Code');
-        }
+  //     qr.callback = async (err, value) => {
+  //       if (err || !value) {
+  //         return reject('Could not decode QR Code');
+  //       }
 
-        const data = value.result.trim();
+  //       const data = value.result.trim();
 
-        // Try to find compressor by serial number or location
-        const compressor = await this.comFactoryModel.findOne({
-          $or: [{ serialNumber: data }, { location: data }],
-        });
+  //       // Try to find compressor by serial number or location
+  //       const compressor = await this.comFactoryModel.findOne({
+  //         $or: [{ serialNumber: data }, { location: data }],
+  //       });
 
-        if (!compressor) {
-          return reject(
-            new NotFoundException('Compressor not found for scanned QR'),
-          );
-        }
+  //       if (!compressor) {
+  //         return reject(
+  //           new NotFoundException('Compressor not found for scanned QR'),
+  //         );
+  //       }
 
-        resolve({
-          matchedBy:
-            data === compressor.serialNumber ? 'serialNumber' : 'location',
-          compressor,
-        });
-      };
+  //       resolve({
+  //         matchedBy:
+  //           data === compressor.serialNumber ? 'serialNumber' : 'location',
+  //         compressor,
+  //       });
+  //     };
 
-      qr.decode(image.bitmap);
-    });
-  }
+  //     qr.decode(image.bitmap);
+  //   });
+  // }
 }

@@ -81,13 +81,13 @@ export class ComFactoryController {
     );
   }
 
-  @Post('scan-qr')
-  @UseInterceptors(FileInterceptor('file'))
-  async scanQRCode(@UploadedFile() file: Express.Multer.File) {
-    if (!file) {
-      throw new BadRequestException('No file uploaded');
-    }
+  // @Post('scan-qr')
+  // @UseInterceptors(FileInterceptor('file'))
+  // async scanQRCode(@UploadedFile() file: Express.Multer.File) {
+  //   if (!file) {
+  //     throw new BadRequestException('No file uploaded');
+  //   }
 
-    return this.comFactoryService.decodeAndMapQRCode(file.buffer);
-  }
+  //   return this.comFactoryService.decodeAndMapQRCode(file.buffer);
+  // }
 }
