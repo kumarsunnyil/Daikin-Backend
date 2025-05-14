@@ -1,0 +1,18 @@
+# version is now obsolete
+services:
+  # diakin:
+    # image: mongo:latest
+    # container_name: mongodiakin
+    # restart: unless-stopped
+    # environment: #env variables to pass into the container
+    #   MONGODB_DATABASE: daikin_db # DB name as per the environment file
+    # ports: # expose ports in “host:container” format
+    #   - "27017:27017"
+    # volumes: 
+    #   - ./database-data-daikin:/data/db
+  redis:
+    image: redis
+    container_name: redisdiakin
+    ports:
+      - "6379:6379"
+    restart: always

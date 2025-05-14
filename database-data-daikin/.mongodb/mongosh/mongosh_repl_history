@@ -1,0 +1,29 @@
+db["compressors"].find()
+show collections
+use daikin_db
+show databases;
+help
+mongosh --authenticatednDatabase diakin_db
+mongosh --authenticationDatabase diakin_db
+show collections
+use diakin_db
+exit
+show collections
+use diakin_db
+exit
+db["users"].find()
+show collections
+show collection
+show collections
+use diakin_db
+db["users"].find()
+show collections
+use daikin_db
+mongosh -- authenticatedDatabase diakin_db
+mongosh --AuthenticatedDatabase diakin_db
+mongosh --authenticatedDatabase diakin_db
+show collections
+db["users"].find()
+use daikin_db
+show dbs
+db["users"].find()
