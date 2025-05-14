@@ -31,7 +31,7 @@ This guide provides step-by-step instructions for installing Node.js on various 
 
 
 
-================================================================Installing NestJS ==============================================================================================================
+================================================================Installing NestJS 8/==================================================================================================
 
 # 🚀 NestJS Installation Guide
 
@@ -59,6 +59,9 @@ npm install -g @nestjs/cli
 nest --version
 
 To Run the Application
+#copy .env_sample to .env in the root folder
+cp .env_sample .env
+npx ts-node src/seeder.ts
 npm run start
 
 ================================================================Installing Reactjs ==============================================================================================================
@@ -134,7 +137,7 @@ MongoDB is a popular NoSQL database known for its flexibility, scalability, and 
    Open Command Prompt and run:
    ```bash
    mongod --version
-   
+
 
 ================================================================Cloning the Reposoitories=======================================================================================================
 
