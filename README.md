@@ -61,6 +61,8 @@ nest --version
 To Run the Application
 #copy .env_sample to .env in the root folder
 cp .env_sample .env
+# Before running the seeder please complete the mongo DB Setup
+# DATABASE SEEDER 
 npx ts-node src/seeder.ts
 npm run start
 
