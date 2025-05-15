@@ -1,19 +1,19 @@
 import {
   ConflictException,
   Injectable,
-  NotFoundException,
+  // NotFoundException,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 
 // const Jimp = require('jimp');
-import Jimp from 'jimp';
-import * as Jimp from 'jimp';
+// import Jimp from 'jimp';
+// import * as Jimp from 'jimp';
 import { Model } from 'mongoose';
 import { ComFactory, ComFactoryDocument } from './entities/com-factory.entity';
 import { CreateComFactoryDto } from './dto/create-com-factory.dto';
 import { Status } from './enums/status.enums';
 import * as QRCode from 'qrcode';
-import * as QrCodeReader from 'qrcode-reader';
+// import * as QrCodeReader from 'qrcode-reader';
 
 @Injectable()
 export class ComFactoryService {

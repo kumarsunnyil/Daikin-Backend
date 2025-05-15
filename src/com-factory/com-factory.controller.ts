@@ -1,5 +1,5 @@
 import {
-  BadRequestException,
+  // BadRequestException,
   Body,
   Controller,
   Delete,
@@ -7,13 +7,13 @@ import {
   Param,
   Patch,
   Post,
-  UploadedFile,
-  UseInterceptors,
+  // UploadedFile,
+  // UseInterceptors,
 } from '@nestjs/common';
 import { ComFactoryService } from './com-factory.service';
 import { ComFactory } from './entities/com-factory.entity';
 import { GetCompressorsBySerialDto } from './dto/create-com-factory.dto';
-import { FileInterceptor } from '@nestjs/platform-express';
+// import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('com-factory')
 export class ComFactoryController {
